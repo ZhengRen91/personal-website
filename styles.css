@@ -1,0 +1,247 @@
+/* ===== MIT-style academic homepage ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #222;
+    background: #ffffff;
+    line-height: 1.55;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+/* ===== Header ===== */
+header.site-header {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.photo {
+    width: 150px;
+    height: 180px;
+    flex-shrink: 0;
+    background: #eee;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-size: 13px;
+    font-style: italic;
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.headline h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+    color: #111;
+    letter-spacing: -0.01em;
+}
+
+.headline .subtitle {
+    font-size: 16px;
+    color: #444;
+    margin: 0 0 4px 0;
+    font-style: italic;
+}
+
+.headline .affiliation {
+    font-size: 15px;
+    color: #444;
+    margin: 0 0 12px 0;
+}
+
+.headline .contact-line {
+    font-size: 14px;
+    color: #333;
+    margin: 4px 0;
+}
+
+.headline .links-line {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.headline .links-line a {
+    margin-right: 4px;
+}
+
+/* ===== Typography ===== */
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #111;
+    margin: 32px 0 12px 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ddd;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 18px 0 6px 0;
+    color: #222;
+}
+
+p {
+    margin: 0 0 12px 0;
+}
+
+a {
+    color: #8a1538;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #6b1029;
+}
+
+strong {
+    font-weight: bold;
+    color: #111;
+}
+
+em {
+    font-style: italic;
+}
+
+ul {
+    margin: 8px 0 12px 0;
+    padding-left: 22px;
+}
+
+ul li {
+    margin-bottom: 6px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 32px 0;
+}
+
+/* ===== Research interests ===== */
+.interests li strong {
+    color: #111;
+}
+
+/* ===== Publications ===== */
+.pub-year-header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin: 20px 0 8px 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+ol.pub-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    counter-reset: pub;
+}
+
+ol.pub-list > li {
+    margin-bottom: 14px;
+    padding-left: 28px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.5;
+    counter-increment: pub;
+}
+
+ol.pub-list > li::before {
+    content: "[" counter(pub) "]";
+    position: absolute;
+    left: 0;
+    color: #666;
+    font-family: Georgia, serif;
+}
+
+.pub-title {
+    color: #111;
+}
+
+.pub-venue {
+    color: #444;
+}
+
+.pub-meta {
+    color: #777;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.pub-links {
+    font-size: 13px;
+    margin-left: 4px;
+}
+
+.pub-links a {
+    margin: 0 2px;
+}
+
+/* ===== Footer ===== */
+footer.site-footer {
+    margin-top: 50px;
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+}
+
+footer.site-footer a {
+    color: #777;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .wrap {
+        padding: 24px 16px 60px;
+    }
+
+    header.site-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .photo {
+        width: 120px;
+        height: 144px;
+    }
+
+    .headline h1 {
+        font-size: 24px;
+    }
+}
